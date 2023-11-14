@@ -30,6 +30,7 @@ def dictToCSV(lista, sepRow='\n', sepCol=';'):
 
 def csvToJson(ficheroCSV, ficheroJSON=None):
     f = None
+    f_json = None
     try:
         if ficheroJSON == None:
             ficheroJSON = nombreFich(ficheroCSV, 'json')
@@ -38,13 +39,17 @@ def csvToJson(ficheroCSV, ficheroJSON=None):
         # Leer fichero origen: CSV
         f = open(ficheroCSV, "r")
         txt = f.read()
+        # Convertir el bloque de texto CSV a dict de python
         d = csvToDict(txt)
-        print(d)
+        # Grabar el dict de python a un fichero json:
+        f_json = open(ficheroJSON, "w")
+        json.dump(d, f_json)
 
     except Exception as e:
         print(e)
     finally:
         if f: f.close()
+        if f_json: f_json.close()
 
 def jsonToCSV(ficheroJson, ficheroCSV=None):
     fcsv = None
@@ -70,6 +75,6 @@ def jsonToCSV(ficheroJson, ficheroCSV=None):
 
 
 if __name__=='__main__':
-    csvToJson('ciudades.csv')
-    jsonToCSV('/home/user/nombres.json')
+    csvToJson(r'..\curso_csic_2023-main\practicas\pandas\merge\Empleados.txt')
+    #jsonToCSV('/home/user/nombres.json')
 
