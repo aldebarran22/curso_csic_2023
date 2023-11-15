@@ -1,0 +1,50 @@
+
+Personas:
+
+Características / Att.
+Descripción: altura, edad, peso, ... nombre, apellidos ...
+
+Acciones / métodos: def
+correr(), escribir(), andar()
+
+1 persona: altura=1.8, edad=40, peso=80 --> objeto / instancia
+
+1 clase: Persona
+
+El objeto en curso: self
+
+__init__(self, ==> constructor
+	inicializar el objeto
+	definir las propiedades y se inicializan
+
+def correr(self):
+	print(self.nombre, 'esta corriendo')
+
+__del__(self) ==> destructor
+	liberar recursos
+
+herencia simple y múltiple:
+
+sobrecarga de operadores.
+str()  --> __str__()
+del()  --> __del__()
+
++	--> __add__()
+-	--> __sub__()
+
+__dict__ {"att1":"valor1", ..."attN":"valorN"}
+
+Relaciones entre clases:
+ -herencia: Cuando tengamos clases que tienen un conocimiento en común
+empleado, analista, jefe de proyecto, ...
+
+ -composición: Un objeto se desglosa en partes y cada parte es un objeto de otra clase
+
+ -Asociación: Dos objetos colaboran de una forma puntual pero no hay ni herencia ni composición
+       entre ellos.
+	Coche y el surtidor de gasolina
+        miCoche.repostar(surtidor) 
+
+Patrones de Diseño: Lista Gof: 23 patrones.
+
+
