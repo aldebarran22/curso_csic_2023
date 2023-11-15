@@ -99,8 +99,18 @@ def test2():
     else:
         print(a2.nombre,'es menor',a1.nombre)
 
+    print(a1.__class__)    
+    print(a1.__class__.__name__)  
+
+    obj = "{}({},'{}','{}',{})" \
+        .format("Analista",1,'Pepe','admin',[])
+    print(obj)
+    an2 = eval(obj)
+    print(an2, type(an2))
+
 if __name__=='__main__':
     #test1()
-    test2()
+    s = "test2()"
+    eval(s)
 
     

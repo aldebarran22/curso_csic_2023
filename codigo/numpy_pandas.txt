@@ -1,0 +1,12 @@
+
+Librerías pandas, numpy
+
+Notación funcional:
+import numpy as np
+
+función(objeto)
+np.abs(mi_array) -> notación funcional
+
+objeto.metodo()
+mi_array.abs()   -> notación O.Objetos
+

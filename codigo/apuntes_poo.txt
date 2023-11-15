@@ -27,6 +27,7 @@ herencia simple y múltiple:
 
 sobrecarga de operadores.
 str()  --> __str__()
+repr()  --> __repr__()
 del()  --> __del__()
 
 +	--> __add__()
